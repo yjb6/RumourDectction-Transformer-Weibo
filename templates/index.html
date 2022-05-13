@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+{% load static %}
+{% csrf_token %}
+{#<html>#}
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+{#<meta charset="utf-8">#}
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width">
+<!-- <meta http-equiv="refresh" content="50;url='https://github.com/iGaoWei/BigDataView'"> -->
+<title>看板登录</title>
+<link rel="stylesheet" type="text/css" href="{% static 'css/reset.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'css/scanboardLogin.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'css/animsition.css' %}" />
+</head>
+<body>
+	<div class="wp animsition">
+
+		<div class="boardLogin">
+			<div class="logo">
+				<img src="{% static 'images/logo2.png'%}">
+			</div>
+			<form action="/search/" method="get">
+				<div class="inpGroup">
+					<span class="loginIco1"></span>
+					<input type="text" name="wbid" placeholder="请输入您想查询的微博ID">
+				</div>
+				<div class="prompt">
+					<p class="error">用户名错误或不存在</p>
+				</div>
+
+				<!-- <div class="inpGroup">
+					<span class="loginIco2"></span>
+					<input type="password" name="" placeholder="请输入您的密码">
+				</div> -->
+				<div class="prompt">
+					<p class="success">输入正确</p>
+				</div>
+                <button class="submit">检测</button>
+				<!-- <a href=@url class="animsition-link submit">登录</a> -->
+			</form>
+		</div>
+	</div>
+	<div id="particles-js"></div>
+</body>
+<script type="text/javascript" src="{%static 'js/jquery.min.js'%}"></script>
+<script type="text/javascript" src="{%static 'js/jquery.animsition.js'%}"></script>
+<script src="{% static 'js/particles.min.js' %}"></script>
+<script src="{%static 'js/app.js' %}"></script>
+<script  src="{% static 'js/indexjs.js' %}"></script>
+</html>
